@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1">
+
+    <title>Hello World</title>
+
+    <style>
+      body {
+        margin: 0px;
+        margin-top: 1.3em;
+        margin-bottom: 2em;
+      }
+      nav {
+        border-bottom: 1px solid black;
+        position: fixed;
+        top:0px;
+        left:0px;
+        right:0px;
+      }
+      input {
+        position: fixed;
+        bottom: 2.5em;
+        left: 1px;
+        right: 1px;
+      }
+      guide{
+        position: fixed;
+        left: 1px;
+        right: 1px;
+        bottom: 0px;
+        display: flex;
+      }
+      guide>div{
+        flex-grow: 1;
+        text-align: center;
+      }
+      .wind {
+        position: fixed;
+        top: 1.3em;
+        bottom: 1.5em;
+        background: gray;
+      }
+      .left {
+        left:0px;
+        right:20px;
+        border-right: 1px solid black;
+        z-index: 100;
+      }
+      .right {
+        left:20px;
+        right:0px;
+        border-left: 1px solid black;
+        z-index: 100;
+      }
+      by{
+        font-size: 0.7em;
+        display: block;
+      }
+      message{
+        display: block;
+        margin-top: 1em;
+      }
+      message:focus{
+        background: red;
+      }
+    </style>
+
+    <!-- Inline scripts are forbidden in Firefox OS apps (CSP restrictions),
+         so we use a script file. -->
+
+    <script
+      src="https://unpkg.com/@xmpp/client@VERSION/dist/xmpp.min.js"
+      crossorigin
+    ></script>
+  </head>
+
+  <body>
+    <nav>abc</nav>
+    <div id="mess"></div>
+    <input type="text" class="tabb"></input>
+    <script src="app.js" defer></script>
+    <div class="left wind"  hidden>left</div>
+    <div class="right wind" hidden>right</div>
+    <guide>
+      <div>send</div>
+      <div>hö?</div>
+      <div>nö.</div>
+    </guide>
+  </body>
+
+</html>
